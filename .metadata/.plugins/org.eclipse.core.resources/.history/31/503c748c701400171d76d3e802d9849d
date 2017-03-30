@@ -1,0 +1,20 @@
+//Crossfire Assignment 3 External Functions C file
+
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+#include "CrossfireA3Head.h"
+
+//Function to get a number from the user within a range and can deal with bad input
+void getNumInRange(int type, int minNum, int maxNum)
+{
+	bool is_valid = false;
+
+	//Getting Players
+	if (type == 1)
+	{
+		printf("How many people are playing (Requires at least two people to play and cannot be more than 6)?")
+	}
+
+}

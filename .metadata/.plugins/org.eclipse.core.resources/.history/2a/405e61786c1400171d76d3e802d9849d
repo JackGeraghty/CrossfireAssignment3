@@ -1,0 +1,16 @@
+//Crossfire Assignment 3 Main C file
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "CrossfireA3Head.h"
+
+//Main Function
+int  main()
+{
+
+	//Print a welcome
+	printf("|| Welcome to Crossfire ||");
+
+	return 0;
+}

@@ -1,0 +1,2174 @@
+11:42:22 **** Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:42:27 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:53:32 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+In file included from ../CrossfireA3ExternFunctions.c:4:0:
+../CrossfireA3Head.h:17:13: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  int Health = 100;
+             ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+11:53:59 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+In file included from ../CrossfireA3ExternFunctions.c:4:0:
+../CrossfireA3Head.h:17:13: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+  int Health = 100;
+             ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+11:54:04 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:12:7: warning: unused variable 'is_valid' [-Wunused-variable]
+  bool is_valid;
+       ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+../CrossfireA3Main.c: In function 'main':
+../CrossfireA3Main.c:16:2: warning: implicit declaration of function 'GetNumPlayers' [-Wimplicit-function-declaration]
+  GetNumPlayers();
+  ^
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+./CrossfireA3Main.o:CrossfireA3Main.c:(.bss+0x0): multiple definition of `Num_Players'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x0): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Remaining_Players'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:14: first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Num_Slots'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x8): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:16: undefined reference to `GetNumPlayers'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+11:55:09 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+./CrossfireA3Main.o:CrossfireA3Main.c:(.bss+0x0): multiple definition of `Num_Players'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x0): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Remaining_Players'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:14: first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Num_Slots'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x8): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:16: undefined reference to `GetNumPlayers'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+11:55:11 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+./CrossfireA3Main.o:CrossfireA3Main.c:(.bss+0x0): multiple definition of `Num_Players'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x0): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Remaining_Players'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:14: first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Num_Slots'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x8): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:16: undefined reference to `GetNumPlayers'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+11:55:12 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+./CrossfireA3Main.o:CrossfireA3Main.c:(.bss+0x0): multiple definition of `Num_Players'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x0): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Remaining_Players'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:14: first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Num_Slots'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x8): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:16: undefined reference to `GetNumPlayers'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+11:55:15 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:12:7: warning: unused variable 'is_valid' [-Wunused-variable]
+  bool is_valid;
+       ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+./CrossfireA3Main.o:CrossfireA3Main.c:(.bss+0x0): multiple definition of `Num_Players'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x0): first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Remaining_Players'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:14: first defined here
+./CrossfireA3Main.o: In function `main':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3Main.c:10: multiple definition of `Num_Slots'
+./CrossfireA3ExternFunctions.o:CrossfireA3ExternFunctions.c:(.bss+0x8): first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+11:55:46 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:12:7: warning: unused variable 'is_valid' [-Wunused-variable]
+  bool is_valid;
+       ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:55:55 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+11:56:00 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:12:7: warning: unused variable 'is_valid' [-Wunused-variable]
+  bool is_valid = false;
+       ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:56:23 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:57:10 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:12:08 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:10:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:7:0:
+../CrossfireA3Head.h:29:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:36:20: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+      Num_Players = atoi(input);
+                    ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:12:23 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:10:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:7:0:
+../CrossfireA3Head.h:29:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:36:20: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+      Num_Players = atoi(input);
+                    ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:13:02 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:29:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:13:31 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:29:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:14:18 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:14:21 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:14:55 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:14:57 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:07 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:20:09 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:21:29 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:21:34 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:22:27 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:22:39 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:22:49 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:26:19 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:70:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:26:28 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:70:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:27:02 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:70:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:27:19 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:27:33 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:27:35 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:28:09 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:28:12 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:28:18 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:29:52 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:45:4: error: 'else' without a previous 'if'
+    else if (is_valid == true)
+    ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:30:02 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:30:05 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:30:11 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:30:44 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:30:47 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:31:55 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+12:31:58 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+12:32:05 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+12:32:14 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:32:16 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:32:39 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+12:32:45 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:32:46 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:40 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+13:23:42 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:59 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:15:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before ']' token
+  char input100];
+               ^
+../CrossfireA3ExternFunctions.c:15:15: error: expected statement before ']' token
+../CrossfireA3ExternFunctions.c:26:10: error: 'input' undeclared (first use in this function)
+    fgets(input, sizeof(input), stdin);
+          ^
+../CrossfireA3ExternFunctions.c:26:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+13:24:02 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+13:51:27 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+13:51:30 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+13:56:04 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+13:57:13 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+13:57:16 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+13:58:11 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+13:58:14 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+13:59:17 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+13:59:19 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+14:00:11 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+14:00:13 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+14:00:14 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+14:00:48 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+14:01:03 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+14:01:04 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+14:01:52 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+14:01:58 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+14:02:00 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+14:03:02 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+../CrossfireA3Main.c: In function 'main':
+../CrossfireA3Main.c:17:6: warning: unused variable 'min_slots' [-Wunused-variable]
+  int min_slots;
+      ^
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+14:03:04 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+14:04:22 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:55:54 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:69:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+11:55:57 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:69:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+11:56:20 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+../CrossfireA3Main.c: In function 'main':
+../CrossfireA3Main.c:17:6: warning: unused variable 'min_slots' [-Wunused-variable]
+  int min_slots;
+      ^
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:56:23 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:13:10 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:29:2: error: unknown type name 'Slot'
+  Slot *location;
+  ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:13:26 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+../CrossfireA3Main.c: In function 'main':
+../CrossfireA3Main.c:17:6: warning: unused variable 'min_slots' [-Wunused-variable]
+  int min_slots;
+      ^
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:13:59 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+../CrossfireA3Main.c: In function 'main':
+../CrossfireA3Main.c:17:6: warning: unused variable 'min_slots' [-Wunused-variable]
+  int min_slots;
+      ^
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:21:25 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:72:2: error: unknown type name 'PlayerNum'
+  PlayerNum PlayerNumber;
+  ^
+../CrossfireA3ExternFunctions.c:73:13: error: 'MAX_SIZE' undeclared (first use in this function)
+  char input[MAX_SIZE];
+             ^
+../CrossfireA3ExternFunctions.c:73:13: note: each undeclared identifier is reported only once for each function it appears in
+../CrossfireA3ExternFunctions.c:81:66: error: subscripted value is neither array nor pointer nor vector
+    printf("Enter the player type for player %s: \n", PlayerNumber[i]);
+                                                                  ^
+../CrossfireA3ExternFunctions.c:73:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE];
+       ^
+../CrossfireA3ExternFunctions.c:72:12: warning: variable 'PlayerNumber' set but not used [-Wunused-but-set-variable]
+  PlayerNum PlayerNumber;
+            ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:22:21 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:81:66: error: subscripted value is neither array nor pointer nor vector
+    printf("Enter the player type for player %s: \n", PlayerNumber[i]);
+                                                                  ^
+../CrossfireA3ExternFunctions.c:73:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+../CrossfireA3ExternFunctions.c:72:17: warning: variable 'PlayerNumber' set but not used [-Wunused-but-set-variable]
+  enum PlayerNum PlayerNumber;
+                 ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:23:52 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:72:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+../CrossfireA3Main.c: In function 'main':
+../CrossfireA3Main.c:17:6: warning: unused variable 'min_slots' [-Wunused-variable]
+  int min_slots;
+      ^
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:24:13 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:24:17 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:35:35 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:16:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:17:6: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  int output;
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:113:7: warning: unused variable 'is_valid' [-Wunused-variable]
+  bool is_valid = false;
+       ^
+../CrossfireA3ExternFunctions.c:112:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:36:14 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:16:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:17:6: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  int output;
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:113:7: warning: unused variable 'is_valid' [-Wunused-variable]
+  bool is_valid = false;
+       ^
+../CrossfireA3ExternFunctions.c:112:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:36:23 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:16:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:17:6: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  int output;
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:113:7: warning: unused variable 'is_valid' [-Wunused-variable]
+  bool is_valid = false;
+       ^
+../CrossfireA3ExternFunctions.c:112:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:36:44 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:16:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:17:6: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  int output;
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:112:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:37:02 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:16:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:17:6: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  int output;
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:112:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:37:36 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:16:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:17:6: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  int output;
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:112:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:38:04 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c:11:6: error: conflicting types for 'getNumInRange'
+ void getNumInRange(int type, int minNum, int maxNum)
+      ^
+In file included from ../CrossfireA3ExternFunctions.c:8:0:
+../CrossfireA3Head.h:16:6: note: previous declaration of 'getNumInRange' was here
+ void getNumInRange(int minNum, int maxNum);
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:17:6: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  int output;
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:112:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:38:22 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getNumInRange':
+../CrossfireA3ExternFunctions.c:17:6: warning: unused variable 'output' [-Wunused-variable]
+  int output;
+      ^
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:73:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:42:08 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:83:12: error: 'is_valid' undeclared (first use in this function)
+   } while (is_valid == false || is_num == false);
+            ^
+../CrossfireA3ExternFunctions.c:83:12: note: each undeclared identifier is reported only once for each function it appears in
+../CrossfireA3ExternFunctions.c:83:33: error: 'is_num' undeclared (first use in this function)
+   } while (is_valid == false || is_num == false);
+                                 ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+12:42:25 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:48:03 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:48:10 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:48:27 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:48:29 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:48:43 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+16:48:46 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:50:44 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+16:50:46 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:52:06 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+16:52:08 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:55:57 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+16:56:05 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+16:56:08 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+16:59:02 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:78:6: warning: unused variable 'Ty' [-Wunused-variable]
+  int Ty;
+      ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+16:59:04 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:59:47 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:78:6: warning: unused variable 'Ty' [-Wunused-variable]
+  int Ty;
+      ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+16:59:53 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+16:59:54 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:00:59 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:01:01 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:78:6: warning: unused variable 'Ty' [-Wunused-variable]
+  int Ty;
+      ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+17:01:07 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:01:09 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:01:32 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:02:13 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:04:16 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:78:6: warning: unused variable 'Ty' [-Wunused-variable]
+  int Ty;
+      ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:04:21 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:04:22 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:07:08 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:07:11 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:08:54 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:08:56 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:10:19 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file CrossfireAssignment3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+17:10:29 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:10:59 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:12:00 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:12:23 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:13:11 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:13:13 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:13:39 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:15:12 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:15:14 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:15:28 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:16:50 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:16:52 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:17:23 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:17:25 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:17:46 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:17:48 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:24:22 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:24:25 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:31:57 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:122:19: error: assignment to expression with array type
+   players[i].Name = fgets(input, MAX_NAME_LEN, stdin);
+                   ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+17:35:13 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:124:3: warning: implicit declaration of function 'removeNewline' [-Wimplicit-function-declaration]
+   removeNewline(input);
+   ^
+../CrossfireA3ExternFunctions.c: At top level:
+../CrossfireA3ExternFunctions.c:130:6: warning: conflicting types for 'removeNewline'
+ void removeNewline(char *StringIn)
+      ^
+../CrossfireA3ExternFunctions.c:124:3: note: previous implicit declaration of 'removeNewline' was here
+   removeNewline(input);
+   ^
+../CrossfireA3ExternFunctions.c: In function 'removeNewline':
+../CrossfireA3ExternFunctions.c:137:22: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if (players[i].Name[j] == '\n')
+                      ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:35:53 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:36:06 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'removeNewline':
+../CrossfireA3ExternFunctions.c:134:18: error: 'Num_Playersstrlen' undeclared (first use in this function)
+  for (i = 0; i < Num_Playersstrlen; i++)
+                  ^
+../CrossfireA3ExternFunctions.c:134:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+17:36:15 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:36:17 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:36:55 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:36:57 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:37:44 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:37:46 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:38:15 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:38:17 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:46:31 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'fillPlayerAttributes':
+../CrossfireA3ExternFunctions.c:137:8: warning: implicit declaration of function 'time' [-Wimplicit-function-declaration]
+  srand(time(NULL));
+        ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:46:44 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:51:55 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:52:17 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:135:2: warning: implicit declaration of function 'printPlayers' [-Wimplicit-function-declaration]
+  printPlayers();
+  ^
+../CrossfireA3ExternFunctions.c: At top level:
+../CrossfireA3ExternFunctions.c:193:6: warning: conflicting types for 'printPlayers'
+ void printPlayers()
+      ^
+../CrossfireA3ExternFunctions.c:135:2: note: previous implicit declaration of 'printPlayers' was here
+  printPlayers();
+  ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:52:29 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:52:31 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:53:36 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:54:59 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:55:03 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:55:37 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:55:39 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+17:58:24 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:120:10: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'unsigned int' [-Wformat=]
+   printf("Enter the name for Player %d (%s):\n", i+1, players[i].Type);
+          ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:58:47 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:59:20 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:05:52 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:6: error: array type has incomplete element type 'char[]'
+ char Types[][] = ("Elf", "Human", "Ogre", "Wizard");
+      ^
+../CrossfireA3ExternFunctions.c:117:24: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ char Types[][] = ("Elf", "Human", "Ogre", "Wizard");
+                        ^
+../CrossfireA3ExternFunctions.c:117:33: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ char Types[][] = ("Elf", "Human", "Ogre", "Wizard");
+                                 ^
+../CrossfireA3ExternFunctions.c:117:41: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ char Types[][] = ("Elf", "Human", "Ogre", "Wizard");
+                                         ^
+../CrossfireA3ExternFunctions.c:117:6: warning: unused variable 'Types' [-Wunused-variable]
+ char Types[][] = ("Elf", "Human", "Ogre", "Wizard");
+      ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+18:06:04 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:22: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ char Types[] = ("Elf", "Human", "Ogre", "Wizard");
+                      ^
+../CrossfireA3ExternFunctions.c:117:31: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ char Types[] = ("Elf", "Human", "Ogre", "Wizard");
+                               ^
+../CrossfireA3ExternFunctions.c:117:39: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ char Types[] = ("Elf", "Human", "Ogre", "Wizard");
+                                       ^
+../CrossfireA3ExternFunctions.c:117:16: error: invalid initializer
+ char Types[] = ("Elf", "Human", "Ogre", "Wizard");
+                ^
+../CrossfireA3ExternFunctions.c:124:11: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    printf("Enter the name for Player %d(%s):\n", i+1, Types[0]);
+           ^
+../CrossfireA3ExternFunctions.c:129:11: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    printf("Enter the name for Player %d(%s):\n", i+1, Types[1]);
+           ^
+../CrossfireA3ExternFunctions.c:134:11: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    printf("Enter the name for Player %d(%s):\n", i+1, Types[2]);
+           ^
+../CrossfireA3ExternFunctions.c:139:11: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    printf("Enter the name for Player %d(%s):\n", i+1, Types[3]);
+           ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+18:06:23 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:6: error: array type has incomplete element type 'char[]'
+ char Types[][] = "Elf", "Human", "Ogre", "Wizard";
+      ^
+../CrossfireA3ExternFunctions.c:117:25: error: expected identifier or '(' before string constant
+ char Types[][] = "Elf", "Human", "Ogre", "Wizard";
+                         ^
+../CrossfireA3ExternFunctions.c:117:6: warning: unused variable 'Types' [-Wunused-variable]
+ char Types[][] = "Elf", "Human", "Ogre", "Wizard";
+      ^
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+18:07:39 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:6: error: array type has incomplete element type 'char[]'
+ char Types[][] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+      ^
+../CrossfireA3ExternFunctions.c:117:6: warning: unused variable 'Types' [-Wunused-variable]
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+18:08:31 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:30: warning: excess elements in array initializer
+ char Types[1][4] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+                              ^
+../CrossfireA3ExternFunctions.c:117:30: note: (near initialization for 'Types')
+../CrossfireA3ExternFunctions.c:117:41: warning: excess elements in array initializer
+ char Types[1][4] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+                                         ^
+../CrossfireA3ExternFunctions.c:117:41: note: (near initialization for 'Types')
+../CrossfireA3ExternFunctions.c:117:51: warning: excess elements in array initializer
+ char Types[1][4] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+                                                   ^
+../CrossfireA3ExternFunctions.c:117:51: note: (near initialization for 'Types')
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:08:41 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:6: error: array type has incomplete element type 'char[]'
+ char Types[][] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+      ^
+../CrossfireA3ExternFunctions.c:117:6: warning: unused variable 'Types' [-Wunused-variable]
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+18:09:02 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:6: error: array type has incomplete element type 'char[]'
+ char Types[][] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+      ^
+../CrossfireA3ExternFunctions.c:117:6: warning: unused variable 'Types' [-Wunused-variable]
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+18:10:29 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:6: error: array type has incomplete element type 'char[]'
+ char Types[][] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+      ^
+../CrossfireA3ExternFunctions.c:117:6: warning: unused variable 'Types' [-Wunused-variable]
+make: *** [subdir.mk:23: CrossfireA3ExternFunctions.o] Error 1
+18:10:36 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:29: warning: initializer-string for array of chars is too long
+ char Types[][4] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+                             ^
+../CrossfireA3ExternFunctions.c:117:29: note: (near initialization for 'Types[1]')
+../CrossfireA3ExternFunctions.c:117:50: warning: initializer-string for array of chars is too long
+ char Types[][4] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+                                                  ^
+../CrossfireA3ExternFunctions.c:117:50: note: (near initialization for 'Types[3]')
+../CrossfireA3ExternFunctions.c:124:11: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    printf("Enter the name for Player %d(%s):\n", i+1, Types[0][0]);
+           ^
+../CrossfireA3ExternFunctions.c:129:11: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    printf("Enter the name for Player %d(%s):\n", i+1, Types[0][1]);
+           ^
+../CrossfireA3ExternFunctions.c:134:11: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    printf("Enter the name for Player %d(%s):\n", i+1, Types[0][2]);
+           ^
+../CrossfireA3ExternFunctions.c:139:11: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+    printf("Enter the name for Player %d(%s):\n", i+1, Types[0][3]);
+           ^
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:11:01 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:29: warning: initializer-string for array of chars is too long
+ char Types[][4] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+                             ^
+../CrossfireA3ExternFunctions.c:117:29: note: (near initialization for 'Types[1]')
+../CrossfireA3ExternFunctions.c:117:50: warning: initializer-string for array of chars is too long
+ char Types[][4] = {{"Elf"}, {"Human"}, {"Ogre"}, {"Wizard"}};
+                                                  ^
+../CrossfireA3ExternFunctions.c:117:50: note: (near initialization for 'Types[3]')
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:11:55 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+../CrossfireA3ExternFunctions.c: In function 'getPlayerInfo':
+../CrossfireA3ExternFunctions.c:117:27: warning: initializer-string for array of chars is too long
+ char Types[][4] = {"Elf", "Human", "Ogre", "Wizard"};
+                           ^
+../CrossfireA3ExternFunctions.c:117:27: note: (near initialization for 'Types[1]')
+../CrossfireA3ExternFunctions.c:117:44: warning: initializer-string for array of chars is too long
+ char Types[][4] = {"Elf", "Human", "Ogre", "Wizard"};
+                                            ^
+../CrossfireA3ExternFunctions.c:117:44: note: (near initialization for 'Types[3]')
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:12:31 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:12:39 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+18:13:38 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:19:22 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3PlayersSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3PlayersSetup.d" -MT"CrossfireA3PlayersSetup.o" -o "CrossfireA3PlayersSetup.o" "../CrossfireA3PlayersSetup.c"
+Finished building: ../CrossfireA3PlayersSetup.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o   
+./CrossfireA3PlayersSetup.o: In function `getNumInRange':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:13: multiple definition of `getNumInRange'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:13: first defined here
+./CrossfireA3PlayersSetup.o: In function `getPlayerInfo':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:67: multiple definition of `getPlayerInfo'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:73: first defined here
+./CrossfireA3PlayersSetup.o: In function `fillPlayerAttributes':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:164: multiple definition of `fillPlayerAttributes'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:170: first defined here
+./CrossfireA3PlayersSetup.o: In function `printPlayers':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:219: multiple definition of `printPlayers'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:225: first defined here
+./CrossfireA3PlayersSetup.o: In function `removeNewline':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:239: multiple definition of `removeNewline'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:245: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+18:19:35 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o   
+./CrossfireA3PlayersSetup.o: In function `getNumInRange':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:13: multiple definition of `getNumInRange'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:13: first defined here
+./CrossfireA3PlayersSetup.o: In function `getPlayerInfo':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:67: multiple definition of `getPlayerInfo'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:73: first defined here
+./CrossfireA3PlayersSetup.o: In function `fillPlayerAttributes':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:164: multiple definition of `fillPlayerAttributes'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:170: first defined here
+./CrossfireA3PlayersSetup.o: In function `printPlayers':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:219: multiple definition of `printPlayers'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:225: first defined here
+./CrossfireA3PlayersSetup.o: In function `removeNewline':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:239: multiple definition of `removeNewline'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:245: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+18:19:37 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3ExternFunctions.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3ExternFunctions.d" -MT"CrossfireA3ExternFunctions.o" -o "CrossfireA3ExternFunctions.o" "../CrossfireA3ExternFunctions.c"
+Finished building: ../CrossfireA3ExternFunctions.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building file: ../CrossfireA3PlayersSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3PlayersSetup.d" -MT"CrossfireA3PlayersSetup.o" -o "CrossfireA3PlayersSetup.o" "../CrossfireA3PlayersSetup.c"
+Finished building: ../CrossfireA3PlayersSetup.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o   
+./CrossfireA3PlayersSetup.o: In function `getNumInRange':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:13: multiple definition of `getNumInRange'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:13: first defined here
+./CrossfireA3PlayersSetup.o: In function `getPlayerInfo':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:67: multiple definition of `getPlayerInfo'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:73: first defined here
+./CrossfireA3PlayersSetup.o: In function `fillPlayerAttributes':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:164: multiple definition of `fillPlayerAttributes'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:170: first defined here
+./CrossfireA3PlayersSetup.o: In function `printPlayers':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:219: multiple definition of `printPlayers'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:225: first defined here
+./CrossfireA3PlayersSetup.o: In function `removeNewline':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:239: multiple definition of `removeNewline'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:245: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+18:20:14 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3ExternFunctions.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o   
+./CrossfireA3PlayersSetup.o: In function `getNumInRange':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:13: multiple definition of `getNumInRange'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:13: first defined here
+./CrossfireA3PlayersSetup.o: In function `getPlayerInfo':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:67: multiple definition of `getPlayerInfo'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:73: first defined here
+./CrossfireA3PlayersSetup.o: In function `fillPlayerAttributes':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:164: multiple definition of `fillPlayerAttributes'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:170: first defined here
+./CrossfireA3PlayersSetup.o: In function `printPlayers':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:219: multiple definition of `printPlayers'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:225: first defined here
+./CrossfireA3PlayersSetup.o: In function `removeNewline':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3PlayersSetup.c:239: multiple definition of `removeNewline'
+./CrossfireA3ExternFunctions.o:C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3ExternFunctions.c:245: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+18:20:34 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:20:37 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+18:33:16 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+../CrossfireA3Main.c: In function 'main':
+../CrossfireA3Main.c:28:2: warning: implicit declaration of function 'Turn' [-Wimplicit-function-declaration]
+  Turn();
+  ^
+Finished building: ../CrossfireA3Main.c
+ 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+18:34:28 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+18:35:37 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+../CrossfireA3TurnCode.c: In function 'Move':
+../CrossfireA3TurnCode.c:33:7: warning: unused variable 'input' [-Wunused-variable]
+  char input[MAX_SIZE_INPUT];
+       ^
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 

@@ -1,0 +1,79 @@
+//Crossfire Assignment 3 External Functions C file
+
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+#include "CrossfireA3Head.h"
+
+//Function to get a number from the user within a range and can deal with bad input
+void getNumInRange(int minNum, int maxNum)
+{
+	bool is_valid = false;
+	bool is_num = false;
+	char input[100];
+	int i;
+	int output;
+
+	//Getting Players
+
+
+		do
+		{
+			//Get Input
+			printf("Enter the number of players(minimum 2, maximum 6):\n");
+			fgets(input, sizeof(input), stdin);
+
+			//Check to see if the input is only numbers
+				for (i = 0; i < strlen(input); i++)
+				{
+					if (input[i] < 48 || input[i] > 57)
+					{
+
+
+						//break is used to escape the loop if any of the characters are not numbers
+						break;
+					}
+
+					is_valid = true;
+
+				}
+
+			if (is_valid == true)
+			{
+
+				//Check to see if the number is in the given range
+
+				if (atoi(input) >= minNum && atoi(input) <= maxNum)
+				{
+					//is  a valid number
+					is_num = true;
+
+					//Assign that value to number of players
+					Num_Players = atoi(input);
+				}
+
+				else if (atoi(input) == 1)
+				{
+					printf("It's hard to play a game by yourself, get some friends.\n");
+				}
+
+				else
+				{
+					printf("Please enter a valid number.\n");
+				}
+			}
+		} while (is_valid == false || is_num == false);
+}
+
+void getPlayerInfo()
+{
+	int i;
+	char input[MAX_SIZE_INPUT];
+
+	for (i = 0; i < Num_Players; i++)
+	{
+
+	}
+}

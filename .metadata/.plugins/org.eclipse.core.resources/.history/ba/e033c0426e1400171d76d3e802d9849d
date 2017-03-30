@@ -1,0 +1,36 @@
+/*
+ * CrossfireA3Head.h
+ *
+ *  Created on: 29 Mar 2017
+ *      Author: jgera
+ */
+
+#ifndef CROSSFIREA3HEAD_H_
+#define CROSSFIREA3HEAD_H_
+#define MAX_NAME_LEN 25	//Max length of a player name
+#define MAX_PLAYERS 6	//Max number of players
+#define MAX_SLOTS 20	//Max number of slots
+
+//Player Struct
+typedef struct {
+	char Name[MAX_NAME_LEN];
+
+
+}Player;
+
+
+//Slot Struct
+typedef struct{
+	int row;
+	int column;
+}Slot;
+
+//Function Prototypes
+void getNumInRange(int minNum, int maxNum);
+
+//Global Variables
+//First three initialised to 0 to avoid errors at run time
+int Num_Players = 0;	//Number of players
+int Remaining_Players = 0; 	//Remaining number of players, used to see when game is over or player leaves game
+int Num_Slots = 0;		// Number of Slots
+#endif /* CROSSFIREA3HEAD_H_ */

@@ -1,0 +1,14 @@
+//Crossfire Assignment 3 External Functions C file
+
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+#include "CrossfireA3Head.h"
+
+//Function to get a number from the user within a range and can deal with bad input
+void getNumInRange(int minNum, int maxNum)
+{
+	bool is_valid = false;
+
+}

@@ -1,0 +1,6 @@
+//Crossfire Assignment 3 External Functions C file
+
+#include <stdio.h>
+#include "CrossfireA3Head.h"
+
+
