@@ -1,19 +1,10 @@
-18:35:37 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+20:08:58 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
 make all 
-Building file: ../CrossfireA3TurnCode.c
-Invoking: Cygwin C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
-../CrossfireA3TurnCode.c: In function 'Move':
-../CrossfireA3TurnCode.c:33:7: warning: unused variable 'input' [-Wunused-variable]
-  char input[MAX_SIZE_INPUT];
-       ^
-Finished building: ../CrossfireA3TurnCode.c
- 
 Building target: CrossfireAssignment3.exe
 Invoking: Cygwin C Linker
 gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
 Finished building target: CrossfireAssignment3.exe
  
 
-18:35:37 Build Finished (took 658ms)
+20:08:58 Build Finished (took 388ms)
 

@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <time.h>
+
+#include "CrossfireA3Head.h"
+
+//C file to manage each turn
+
+void Turn()
+{
+	bool is_game_over = false;
+	int i;
+
+	do
+	{
+		for (i = 0; i < Remaining_Players; i++)
+		{
+
+
+
+
+		}
+	} while (is_game_over == false);
+
+	return 1;
+}
+
+
+void Move(int PlayerID)
+{
+	char input[MAX_SIZE_INPUT];
+
+	//check can move
+
+}
+
+void Attack(int PlayerID)
+{
+
+}
+
+int check_input(char *StringIn, char *Command)
+{
+	int output;
+	int i;
+
+	//Get rid of any newline characters and replace them with NULL terminators
+	for (i = 0; i < strlen(StringIn); i++)
+	{
+		if (StringIn[i] == '\n')
+		{
+			StringIn[i] = '\0';
+		}
+	}
+	output = strcmp(strlwr(StringIn), Command);
+
+	return output;
+}
+
+
+

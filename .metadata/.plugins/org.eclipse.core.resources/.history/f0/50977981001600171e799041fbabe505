@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "CrossfireA3Head.h"
+
+//C file for setting up the board and it's elements
+
+void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct Slot **downLeft, struct Slot **downRight)
+{
+	struct Slot **Board = malloc(Size * sizeof(struct Slot *));
+	int i;
+	int j;
+	//Set up the board as a pointer of pointer to slots
+	for (int i = 0; i < Size; i++)
+	{
+		Board[i] = malloc(Size * sizeof(Slot));
+
+		for  (j = 0; j < Size; j++)
+		{
+			Board[i][j].row = i;
+			Board[i][j].column = j;
+		}
+	}
+
+	for (i = 0; i < Size - 1; i++)
+	{
+		//Set up slots that don't have an element adjacent on the left
+		Board[i][0].right = &Board[i][1];
+		Board[i][0].up = &Board[i][0];
+		Board[i][0].down = &Board[i + 1][0];
+
+		//Set up slots that don't have an element adjacent on the right
+		Board[i][Size - 1].left = &Board[Size ][Size - 2];
+		Board[i][Size - 1].up = &Board[i - 1][Size - 1];
+		Board[i][Size - 1].down = &Board[i + 1][Size - 1];
+
+	}
+
+	//Set up adjacent slots for (0,0)
+	Board[0][0].right = &Board[0][1];
+	Board[0][0].down = &Board[1][0];
+
+	//Set up adjacent slots for (0, Size -1)
+	Board[0][Size - 1].left = &Board[0][Size - 2];
+	Board[0][Size - 1].down = &Board[1][Size - 1];
+
+	//Adjacent slots for (Size-1, 0)
+	Board[Size - 1][0].right = &Board[Size - 1][1];
+	Board[Size - 1][0].up = &Board[Size - 2][0];
+
+	//Adjacent slots for (Size - 1, Size -1)
+	Board[Size - 1][Size - 1].left = &Board[Size - 2][Size - 1];
+	Board[Size - 1][Size - 1].left = &Board[Size - 1][Size - 2];
+
+	*upLeft = &Board[0][0];
+	*upRight = &Board[0][Size - 1];
+	*downLeft = &Board[Size - 1][0];
+	*downRight = &Board[Size - 1][Size - 1];
+}

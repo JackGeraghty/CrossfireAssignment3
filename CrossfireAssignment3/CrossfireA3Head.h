@@ -11,25 +11,23 @@
 #define MAX_PLAYERS 6	//Max number of players
 #define MAX_SIZE_INPUT 100 	//Max number for generic input
 
-
-//Function Prototypes
-void getNumInRange(int minNum, int maxNum);
-void getPlayerInfo();
-void fillPlayerAttributes(int PlayerID);
-void printPlayers();
-void removeNewline();
 enum PlayerType {ELF, HUMAN, OGRE, WIZARD};
 enum SlotType {LEVEL_GROUND, HILL, CITY};
 
+
 //Slot Struct
-typedef struct{
+struct Slot{
 	int row;
 	int column;
 	enum SlotType Type;
-}Slot;
+	struct Slot *left;
+	struct Slot *right;
+	struct Slot *up;
+	struct Slot *down;
+};
 
 //Player Struct
-typedef struct {
+struct Player{
 	char Name[MAX_NAME_LEN];
 	enum PlayerType Type;
 	int Health;
@@ -38,9 +36,34 @@ typedef struct {
 	int Magic_Skills;
 	int Luck;
 	int Dexterity;
-	Slot *location;
+	int row, column;
 
-}Player;
+};
+
+struct Player players[6];
+
+//Function Prototypes
+
+//Player Functions
+void getNumInRange(int minNum, int maxNum);
+void getPlayerInfo();
+void fillPlayerAttributes(int PlayerID);
+void printPlayers();
+
+//Turn Functions
+void Turn();
+void Move(int PlayerID, int BoardSize);
+void Attack(int PlayerID);
+int check_input(char *StringIn, char *Command);
+int getInput(int PlayerID);
+void removePlayer(int PlayerID);
+
+
+//Board Functions
+void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct Slot **downLeft, struct Slot **downRight);
+void fillPlayers(int Size);
+
+void removeNewline();
 
 
 
@@ -48,5 +71,5 @@ typedef struct {
 int Num_Players;	//Number of players
 int Remaining_Players; 	//Remaining number of players, used to see when game is over or player leaves game
 int Num_Slots;		// Number of Slots
-Player players[MAX_PLAYERS];
+
 #endif /* CROSSFIREA3HEAD_H_ */
