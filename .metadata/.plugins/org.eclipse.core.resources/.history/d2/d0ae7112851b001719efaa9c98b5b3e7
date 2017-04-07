@@ -86,7 +86,7 @@ void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct S
 	}
 
 	//Test print each slot type
-/*
+
 	for (i = 0; i < Size; i++)
 	{
 		for (j = 0; j < Size; j++)
@@ -111,7 +111,7 @@ void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct S
 			}
 		}
 	}
-*/
+
 }
 
 

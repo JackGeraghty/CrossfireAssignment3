@@ -37,12 +37,8 @@ struct Player{
 	int Luck;
 	int Dexterity;
 	int row, column;
-	int slot_type;
-	int has_quit;
 
 };
-
-struct Player players[6];
 
 //Function Prototypes
 
@@ -59,8 +55,7 @@ void Attack(int PlayerID);
 int check_input(char *StringIn, char *Command);
 int getInput(int PlayerID);
 void removePlayer(int PlayerID);
-int moveDir(int PlayerID, int dir);
-void modValues(int PlayerID);
+
 
 //Board Functions
 void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct Slot **downLeft, struct Slot **downRight);
@@ -73,7 +68,7 @@ void removeNewline();
 //Global Variables
 int Num_Players;	//Number of players
 int Remaining_Players; 	//Remaining number of players, used to see when game is over or player leaves game
-int Num_Slots;		//Number of Slots
-int slot_Types[7][7];
-
+int Num_Slots;		// Number of Slots
+struct Player *players;
+players = malloc(Num_Players * sizeof(struct Player));
 #endif /* CROSSFIREA3HEAD_H_ */

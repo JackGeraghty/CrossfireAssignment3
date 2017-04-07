@@ -5478,3 +5478,555 @@ Invoking: Cygwin C Linker
 gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
 Finished building target: CrossfireAssignment3.exe
  
+16:32:06 **** Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+../CrossfireA3Main.c: In function 'main':
+../CrossfireA3Main.c:36:2: warning: statement with no effect [-Wunused-value]
+  BoardSize 7;
+  ^
+../CrossfireA3Main.c:36:12: error: expected ';' before numeric constant
+  BoardSize 7;
+            ^
+make: *** [subdir.mk:29: CrossfireA3Main.o] Error 1
+16:32:13 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+16:32:15 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:58 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+In file included from ../CrossfireA3BoardSetup.c:5:0:
+../CrossfireA3Head.h:73:1: warning: data definition has no type or storage class
+ players = calloc(Num_Players, sizeof(struct Player));
+ ^
+../CrossfireA3Head.h:73:1: warning: type defaults to 'int' in declaration of 'players' [-Wimplicit-int]
+../CrossfireA3Head.h:73:1: error: conflicting types for 'players'
+../CrossfireA3Head.h:72:16: note: previous declaration of 'players' was here
+ struct Player *players;
+                ^
+../CrossfireA3Head.h:73:11: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+ players = calloc(Num_Players, sizeof(struct Player));
+           ^
+../CrossfireA3Head.h:73:11: error: initializer element is not constant
+../CrossfireA3BoardSetup.c: In function 'fillPlayers':
+../CrossfireA3BoardSetup.c:128:10: error: subscripted value is neither array nor pointer nor vector
+   players[i].row = j;
+          ^
+../CrossfireA3BoardSetup.c:136:10: error: subscripted value is neither array nor pointer nor vector
+   players[i].column = j;
+          ^
+../CrossfireA3BoardSetup.c:142:64: error: subscripted value is neither array nor pointer nor vector
+   printf("Player %d is in location [%d, %d].\n", i + 1, players[i].row , players[i].column );
+                                                                ^
+../CrossfireA3BoardSetup.c:142:81: error: subscripted value is neither array nor pointer nor vector
+   printf("Player %d is in location [%d, %d].\n", i + 1, players[i].row , players[i].column );
+                                                                                 ^
+make: *** [subdir.mk:29: CrossfireA3BoardSetup.o] Error 1
+16:38:51 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+In file included from ../CrossfireA3BoardSetup.c:5:0:
+../CrossfireA3Head.h:73:1: warning: data definition has no type or storage class
+ players = malloc(Num_Players * sizeof(struct Player));
+ ^
+../CrossfireA3Head.h:73:1: warning: type defaults to 'int' in declaration of 'players' [-Wimplicit-int]
+../CrossfireA3Head.h:73:1: error: conflicting types for 'players'
+../CrossfireA3Head.h:72:16: note: previous declaration of 'players' was here
+ struct Player *players;
+                ^
+../CrossfireA3Head.h:73:11: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+ players = malloc(Num_Players * sizeof(struct Player));
+           ^
+../CrossfireA3Head.h:73:11: error: initializer element is not constant
+../CrossfireA3BoardSetup.c: In function 'fillPlayers':
+../CrossfireA3BoardSetup.c:128:10: error: subscripted value is neither array nor pointer nor vector
+   players[i].row = j;
+          ^
+../CrossfireA3BoardSetup.c:136:10: error: subscripted value is neither array nor pointer nor vector
+   players[i].column = j;
+          ^
+../CrossfireA3BoardSetup.c:142:64: error: subscripted value is neither array nor pointer nor vector
+   printf("Player %d is in location [%d, %d].\n", i + 1, players[i].row , players[i].column );
+                                                                ^
+../CrossfireA3BoardSetup.c:142:81: error: subscripted value is neither array nor pointer nor vector
+   printf("Player %d is in location [%d, %d].\n", i + 1, players[i].row , players[i].column );
+                                                                                 ^
+make: *** [subdir.mk:29: CrossfireA3BoardSetup.o] Error 1
+16:39:24 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building file: ../CrossfireA3PlayersSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3PlayersSetup.d" -MT"CrossfireA3PlayersSetup.o" -o "CrossfireA3PlayersSetup.o" "../CrossfireA3PlayersSetup.c"
+Finished building: ../CrossfireA3PlayersSetup.c
+ 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:03:15 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+../CrossfireA3TurnCode.c: In function 'Move':
+../CrossfireA3TurnCode.c:86:17: warning: implicit declaration of function 'moveDir' [-Wimplicit-function-declaration]
+      is_valid = moveDir(PlayerID, 3);
+                 ^
+../CrossfireA3TurnCode.c:109:12: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+     printf("%s is in the top right corner of the board. Should they move 'left' or 'down' ?\n");
+            ^
+../CrossfireA3TurnCode.c: At top level:
+../CrossfireA3TurnCode.c:131:6: error: conflicting types for 'moveDir'
+ bool moveDir(int PlayerID, int dir)
+      ^
+../CrossfireA3TurnCode.c:86:17: note: previous implicit declaration of 'moveDir' was here
+      is_valid = moveDir(PlayerID, 3);
+                 ^
+make: *** [subdir.mk:29: CrossfireA3TurnCode.o] Error 1
+17:03:39 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+In file included from ../CrossfireA3BoardSetup.c:5:0:
+../CrossfireA3Head.h:60:1: error: unknown type name 'bool'
+ bool moveDir(int PlayerID, int dir);
+ ^
+make: *** [subdir.mk:29: CrossfireA3BoardSetup.o] Error 1
+17:04:55 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+In file included from ../CrossfireA3BoardSetup.c:5:0:
+../CrossfireA3Head.h:60:1: error: unknown type name 'bool'
+ bool moveDir(int PlayerID, int dir);
+ ^
+make: *** [subdir.mk:29: CrossfireA3BoardSetup.o] Error 1
+17:05:01 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building file: ../CrossfireA3PlayersSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3PlayersSetup.d" -MT"CrossfireA3PlayersSetup.o" -o "CrossfireA3PlayersSetup.o" "../CrossfireA3PlayersSetup.c"
+Finished building: ../CrossfireA3PlayersSetup.c
+ 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+../CrossfireA3TurnCode.c: In function 'Move':
+../CrossfireA3TurnCode.c:92:35: error: invalid suffix "is_valid" on integer constant
+      is_valid = moveDir(PlayerID, 1is_valid = moveDir(PlayerID, 4););
+                                   ^
+../CrossfireA3TurnCode.c:92:67: error: expected ')' before ';' token
+      is_valid = moveDir(PlayerID, 1is_valid = moveDir(PlayerID, 4););
+                                                                   ^
+../CrossfireA3TurnCode.c:109:12: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+     printf("%s is in the top right corner of the board. Should they move 'left' or 'down' ?\n");
+            ^
+make: *** [subdir.mk:29: CrossfireA3TurnCode.o] Error 1
+17:05:33 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+17:18:59 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+../CrossfireA3TurnCode.c: In function 'Move':
+../CrossfireA3TurnCode.c:175:17: warning: implicit declaration of function 'moveDIr' [-Wimplicit-function-declaration]
+      is_valid = moveDIr(PlayerID, 2);
+                 ^
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+./CrossfireA3TurnCode.o: In function `Move':
+C:\Users\jgera\Documents\GitHub\CrossfireAssignment3\CrossfireAssignment3\Debug/../CrossfireA3TurnCode.c:175: undefined reference to `moveDIr'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:31: CrossfireAssignment3.exe] Error 1
+17:19:05 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:21:06 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:21:26 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+11:29:17 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:29:19 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+11:33:05 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+../CrossfireA3TurnCode.c: In function 'Turn':
+../CrossfireA3TurnCode.c:30:12: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+     printf("%s is in position [%d, %d]\n", players[i].Name);
+            ^
+../CrossfireA3TurnCode.c:30:12: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:33:26 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:33:28 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+11:35:21 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:35:25 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+11:43:56 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building file: ../CrossfireA3PlayersSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3PlayersSetup.d" -MT"CrossfireA3PlayersSetup.o" -o "CrossfireA3PlayersSetup.o" "../CrossfireA3PlayersSetup.c"
+Finished building: ../CrossfireA3PlayersSetup.c
+ 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+11:52:11 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building file: ../CrossfireA3PlayersSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3PlayersSetup.d" -MT"CrossfireA3PlayersSetup.o" -o "CrossfireA3PlayersSetup.o" "../CrossfireA3PlayersSetup.c"
+Finished building: ../CrossfireA3PlayersSetup.c
+ 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:01:40 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+../CrossfireA3TurnCode.c: In function 'modValues':
+../CrossfireA3TurnCode.c:500:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:02:00 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:03:05 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:03:08 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:04:17 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:04:20 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:08:54 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:09:01 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:14:21 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building file: ../CrossfireA3PlayersSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3PlayersSetup.d" -MT"CrossfireA3PlayersSetup.o" -o "CrossfireA3PlayersSetup.o" "../CrossfireA3PlayersSetup.c"
+Finished building: ../CrossfireA3PlayersSetup.c
+ 
+Building file: ../CrossfireA3TurnCode.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3TurnCode.d" -MT"CrossfireA3TurnCode.o" -o "CrossfireA3TurnCode.o" "../CrossfireA3TurnCode.c"
+Finished building: ../CrossfireA3TurnCode.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:25:03 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:25:37 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:25:39 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:25:59 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 
+12:26:01 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:26:47 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+../CrossfireA3BoardSetup.c: In function 'createBoard':
+../CrossfireA3BoardSetup.c:114:1: warning: "/*" within comment [-Wcomment]
+ /*
+ ^
+../CrossfireA3BoardSetup.c:89:1: error: unterminated comment
+ /*
+ ^
+../CrossfireA3BoardSetup.c:86:2: error: expected declaration or statement at end of input
+  }
+  ^
+make: *** [subdir.mk:29: CrossfireA3BoardSetup.o] Error 1
+12:26:56 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+make all 
+Building file: ../CrossfireA3BoardSetup.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
+Finished building: ../CrossfireA3BoardSetup.c
+ 
+Building file: ../CrossfireA3Main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
+Finished building: ../CrossfireA3Main.c
+ 
+Building target: CrossfireAssignment3.exe
+Invoking: Cygwin C Linker
+gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
+Finished building target: CrossfireAssignment3.exe
+ 

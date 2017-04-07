@@ -111,7 +111,7 @@ void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct S
 			}
 		}
 	}
-*/
+/*
 }
 
 

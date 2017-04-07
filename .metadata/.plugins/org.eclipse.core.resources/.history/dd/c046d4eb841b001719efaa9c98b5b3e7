@@ -46,7 +46,6 @@ int  main()
 	for (i = 0; i < Num_Players; i++)
 	{
 		players[i].slot_type = slot_Types[players[i].row][players[i].column];
-		//printf("%d slot type = %d\n", i, players[i].slot_type);
 	}
 
 

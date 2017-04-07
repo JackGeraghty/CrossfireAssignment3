@@ -50,7 +50,7 @@ int  main()
 	}
 
 
-	Turn(BoardSize);
+	//Turn(BoardSize);
 
 	return 0;
 }

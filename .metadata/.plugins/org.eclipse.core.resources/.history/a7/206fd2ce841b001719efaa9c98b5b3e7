@@ -22,7 +22,6 @@ int  main()
 	struct Slot *downRight;
 	struct Slot *downLeft;
 	int BoardSize;
-	int i;
 	//Print a welcome
 	printf("|| Welcome to Crossfire ||\n");
 
@@ -42,11 +41,9 @@ int  main()
 	//Fill each player into a random position on the board
 	fillPlayers(BoardSize);
 
-	//Set up slot types
 	for (i = 0; i < Num_Players; i++)
 	{
-		players[i].slot_type = slot_Types[players[i].row][players[i].column];
-		//printf("%d slot type = %d\n", i, players[i].slot_type);
+		players[PlayerID].slot_type = slot_Types[players[PlayerID].row][players[PlayerID].column];
 	}
 
 

@@ -75,13 +75,13 @@ void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct S
 
 		}
 
-	//Randomly assign each position a type and store them in a global array
+	//Randomly assign each position a type
 	for (i = 0; i < Size; i++)
 	{
 		for (j = 0; j < Size; j++)
 		{
 			k = rand() % 3;
-			slot_Types[i][j] = k;
+			Board[i][j].Type = k;
 		}
 	}
 
@@ -91,17 +91,17 @@ void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct S
 	{
 		for (j = 0; j < Size; j++)
 		{
-			if (slot_Types[i][j] == 0)
+			if (Board[i][j].Type == 0)
 			{
 				printf("[Level Ground] ");
 			}
 
-			else if (slot_Types[i][j] == 1)
+			else if (Board[i][j].Type == 1)
 			{
 				printf("[Hill] ");
 			}
 
-			else if (slot_Types[i][j] == 2)
+			else if (Board[i][j].Type == 2)
 			{
 				printf("[City] ");
 			}

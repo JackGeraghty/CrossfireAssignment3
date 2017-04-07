@@ -38,7 +38,6 @@ struct Player{
 	int Dexterity;
 	int row, column;
 	int slot_type;
-	int has_quit;
 
 };
 

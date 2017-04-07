@@ -37,8 +37,6 @@ struct Player{
 	int Luck;
 	int Dexterity;
 	int row, column;
-	int slot_type;
-	int has_quit;
 
 };
 
@@ -73,7 +71,6 @@ void removeNewline();
 //Global Variables
 int Num_Players;	//Number of players
 int Remaining_Players; 	//Remaining number of players, used to see when game is over or player leaves game
-int Num_Slots;		//Number of Slots
-int slot_Types[7][7];
+int Num_Slots;		// Number of Slots
 
 #endif /* CROSSFIREA3HEAD_H_ */
