@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="652" key="DIALOG_X_ORIGIN"/>
+		<item value="362" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="is Going to Move" key="selection"/>
-		<item value="false" key="casesensitive"/>
+		<item value="Num_Targets" key="selection"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
-		<item value="false" key="wholeword"/>
+		<item value="true" key="wholeword"/>
 		<list key="findhistory">
-			<item value="is going to move"/>
-			<item value="upleft"/>
+			<item value="attackableCount"/>
+			<item value="attackablePlayers"/>
+			<item value="place"/>
+			<item value="Players"/>
+			<item value="boardSize"/>
+			<item value="board"/>
+			<item value="BoardSize"/>
+			<item value="board[i][boardSize-1].left = &amp;board[boardSize - 1][boardSize-2];"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Num_Targets"/>
+			<item value="targets"/>
+			<item value="Pos"/>
+			<item value="players"/>
+			<item value="Size"/>
+			<item value="Board"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="336" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="454" key="DIALOG_HEIGHT"/>
-		<item value="436" key="DIALOG_X_ORIGIN"/>
-		<item value="217" key="DIALOG_Y_ORIGIN"/>
+		<item value="866" key="DIALOG_X_ORIGIN"/>
+		<item value="232" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

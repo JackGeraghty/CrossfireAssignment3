@@ -1,20 +1,6 @@
-12:26:56 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
+21:56:24 **** Incremental Build of configuration Debug for project CrossfireAssignment3 ****
 make all 
-Building file: ../CrossfireA3BoardSetup.c
-Invoking: Cygwin C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3BoardSetup.d" -MT"CrossfireA3BoardSetup.o" -o "CrossfireA3BoardSetup.o" "../CrossfireA3BoardSetup.c"
-Finished building: ../CrossfireA3BoardSetup.c
- 
-Building file: ../CrossfireA3Main.c
-Invoking: Cygwin C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CrossfireA3Main.d" -MT"CrossfireA3Main.o" -o "CrossfireA3Main.o" "../CrossfireA3Main.c"
-Finished building: ../CrossfireA3Main.c
- 
-Building target: CrossfireAssignment3.exe
-Invoking: Cygwin C Linker
-gcc  -o "CrossfireAssignment3.exe"  ./CrossfireA3BoardSetup.o ./CrossfireA3Main.o ./CrossfireA3PlayersSetup.o ./CrossfireA3TurnCode.o   
-Finished building target: CrossfireAssignment3.exe
- 
+make: Nothing to be done for 'all'.
 
-12:26:57 Build Finished (took 1s.313ms)
+21:56:25 Build Finished (took 86ms)
 

@@ -6,21 +6,17 @@
 #include <stdbool.h>
 #include "CrossfireA3Head.h"
 
-int getBoardSize();
-
 //Main Function
 int  main()
 {
 	setbuf(stdout, NULL);
 
 	//Set number of players and slots to zero
-	Num_Players = 0;
-	Num_Slots = 0;
+	Num_Players = 0;	//Stores the number of players
+	bool do_once = false;	//Bool used to determine who is the winner
+	int is_game_over = 0;	//Used to check if there is only one player left
 
-	struct Slot *upLeft;
-	struct Slot *upRight;
-	struct Slot *downRight;
-	struct Slot *downLeft;
+
 	int BoardSize;
 	int i;
 	//Print a welcome
@@ -33,65 +29,37 @@ int  main()
 	//Get their info
 	getPlayerInfo();
 
+	//Set the remaining players
+	Remaining_Players = Num_Players;
+
 	//Get the size of the board
-	BoardSize = 7;
+	BoardSize = BOARD_SIZE;	//BOARD_SIZE is a constant which can be changed in the header file
 
 	//Create the board
 	createBoard(BoardSize, &upLeft, &upRight, &downLeft, &downRight);
 
-	//Fill each player into a random position on the board
-	fillPlayers(BoardSize);
-
 	//Set up slot types
 	for (i = 0; i < Num_Players; i++)
 	{
-		players[i].slot_type = slot_Types[players[i].row][players[i].column];
-		//printf("%d slot type = %d\n", i, players[i].slot_type);
+		players[i].Pos->Type = Board[players[i].Pos->row][players[i].Pos->column].Type;
 	}
 
-
-	Turn(BoardSize);
-
-	return 0;
-}
-
-//Function to get the size of the board from user. Has precautions to avoid bad input
-int getBoardSize()
-{
-	int i;
-	bool is_valid;
-	bool is_num;
-	char input[MAX_SIZE_INPUT];
-	int output;
-
+	//Do the turn function and check to see if the game is over while there is more than one player
 	do
 	{
-		is_valid = true;
-		is_num = false;
-		printf("Enter the size of the board(The board is square): \n");
-		fgets(input, sizeof(input), stdin);
+		Turn(BoardSize);
+		is_game_over = checkGameState();
+	} while  (is_game_over == 0);
 
-		//Check to see if its a number
-		for (i = 0; i < strlen(input);i++)
+
+	//Determine who has won by checking the has_quit variable of each player
+	for (i = 0; i < Num_Players; i++)
 		{
-			if (input[i] < 48 || input[i] > 57)
+			if (players[i].has_quit == 0 && do_once == false)
 			{
-				break;
-				is_valid = false;
+				printf("Game Over, %s is the winner\n", players[0].Name);
+				do_once = true;
 			}
 		}
-
-		if (is_valid == true)
-		{
-			if ((atoi(input) <= 100 && atoi(input) > 1))
-			{
-				is_num = true;
-				output = atoi(input);
-
-			}
-		}
-
-	} while (is_valid == false || is_num == false);
-
-	return output;
+	return 0;
 }

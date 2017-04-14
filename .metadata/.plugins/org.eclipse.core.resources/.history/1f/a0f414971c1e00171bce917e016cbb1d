@@ -1,0 +1,198 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#include "CrossfireA3Head.h"
+
+//C file for setting up the Board and it's elements
+
+void createBoard(int Size, struct Slot **upLeft, struct Slot **upRight, struct Slot **downLeft, struct Slot **downRight)
+{
+	int i, j, k;
+
+	Board = malloc(Size * sizeof(struct Slot *));
+
+	for (i = 0 ; i < Size ; i++)
+	{
+		//This allocates in memory the space for the slots in each row of the Board
+		Board[i] = malloc(Size * sizeof(struct Slot));
+
+		//For each slot it sets up the row and column number
+		for(j = 0 ; j < Size ; j++)
+		{
+			Board[i][j].row = i;
+			Board[i][j].column = j;
+
+		}
+	}
+
+	//It sets up the adjacent slots for the slots that are
+	//not at the borders. These slots have 4 adjacent elements
+	for (i = 1 ; i < Size - 1 ; i++)
+	{
+		for(j = 1 ; j < Size - 1 ; j++)
+		{
+			Board[i][j].up = &Board[i-1][j];
+			Board[i][j].right = &Board[i][j+1];
+			Board[i][j].down = &Board[i+1][j];
+			Board[i][j].left = &Board[i][j-1];
+		}
+	}
+
+	//It sets up the adjacent slots for the slots that are
+	//in the first and the last row, except the slots at the edges.
+	for(int j = 1; j < Size - 1 ; j++)
+	{
+		//It sets up the adjacent slots for the slots that are in the first row.
+		//These slots don't have an adjacent element on top of them
+		// because they are on the first row of the Board
+		Board[0][j].right = &Board[0][j+1];
+		Board[0][j].left = &Board[0][j-1];
+		Board[0][j].down = &Board[1][j];
+		Board[0][j].up = NULL;
+
+		//It sets up the adjacent slots for the slots that are in the last row.
+		//These slots don't have an adjacent element on down them
+		// because they are on the last row of the Board
+		Board[Size - 1][j].right = &Board[Size - 1][j+1];
+		Board[Size -1][j].left = &Board[Size - 1][j-1];
+		Board[Size - 1][j].up = &Board[Size - 2][j];
+		Board[Size - 1][j].down = NULL;
+	}
+
+	//It sets up the adjacent slots for the slots that are
+	//in the first and the last column, except the slots at the edges.
+	//
+	for(i = 1; i < Size - 1 ; i++)
+	{
+		//It sets up the adjacent slots for the slots that are in the first row.
+		//These slots don't have an adjacent element on the left
+		// because they are on the first column of the Board
+		Board[i][0].right = &Board[i][1];
+		Board[i][0].up = &Board[i-1][0];
+		Board[i][0].down = &Board[i+1][0];
+		Board[i][0].left = NULL;
+
+		//It sets up the adjacent slots for the slots that are in the last row.
+		//These slots don't have an adjacent element on the right
+		// because they are on the last column of the Board
+		Board[i][Size-1].left = &Board[Size - 1][Size-2];
+		Board[i][Size -1].up = &Board[i -1][Size-1];
+		Board[i][Size -1].down = &Board[i+1][Size -1];
+		Board[i][Size -1].right = NULL;
+	}
+
+
+	//It sets up the adjacent slots for the slot at position (0,0).
+	//This only has only 2 adjacent slots: right and down
+	Board[0][0].right = &Board[0][1];
+	Board[0][0].down = &Board[1][0];
+	Board[0][0].up = NULL;
+	Board[0][0].left = NULL;
+
+	//It sets up the adjacent slots for the slot at position (0,Size -1).
+	//This only has only 2 adjacent slots: left and down
+	Board[0][Size-1].left = &Board[0][Size-2];
+	Board[0][Size -1].down = &Board[1][Size -1];
+	Board[0][Size-1].right = NULL;
+	Board[0][Size -1].up = NULL;
+
+	//It sets up the adjacent slots for the slot at position (boarSize -1 ,0).
+	//This only has only 2 adjacent slots: up and right
+	Board[Size -1][0].right = &Board[Size -1][1];
+	Board[Size -1][0].up = &Board[Size -2][0];
+	Board[Size -1][0].left = NULL;
+	Board[Size -1][0].down = NULL;
+
+	//It sets up the adjacent slots for the slot at position (boarSize -1 ,Size-1).
+	//This only has only 2 adjacent slots: up and left
+	Board[Size - 1][Size-1].up = &Board[Size-2][Size-1];
+	Board[Size - 1][Size -1].left = &Board[Size -1][Size -2];
+	Board[Size - 1][Size-1].right = NULL;
+	Board[Size - 1][Size -1].down = NULL;
+
+	//assigns a pointer to slot at position (0, 0)
+	*upLeft = &Board[0][0];
+	//assigns pointer of pointer to slot at position (0, Size -1)
+	*upRight = &Board[0][Size -1];
+	//assigns pointer of pointer to slot at position ( Size -1,)
+	*downLeft = &Board[Size -1][0];
+	//assigns pointer of pointer to slot at position (Size -1, Size -1)
+	*downRight = &Board[Size -1][Size -1];
+
+	//Test Print the Board
+	for (i = 0; i < Size;i++)
+	{
+		for (j = 0; j < Size; j++)
+		{
+			printf("[%d][%d] ", Board[i][j].row,Board[i][j].column);
+			if (j == Size - 1)
+			{
+				printf("\n");
+			}
+		}
+
+	}
+
+srand(time(NULL));
+	//Randomly assign each position a type and store them in a global array
+	for (i = 0; i < Size; i++)
+	{
+		for (j = 0; j < Size; j++)
+		{
+			k = rand() % 3;
+			printf("%d\n", k);
+			Board[i][j].Type = k;
+		}
+	}
+
+	for (i = 0; i < Num_Players; i++)
+	{
+		players[i].slot_type = Board[players[i].Pos->][players[i].Pos->column].Type;
+	}
+
+	//Test print each slot type
+
+	for (i = 0; i < Size; i++)
+	{
+		for (j = 0; j < Size; j++)
+		{
+			if (players[i].slot_type == 0)
+			{
+				printf("[Level Ground] ");
+			}
+
+			else if (players[i].slot_type == 1)
+			{
+				printf("[Hill] ");
+			}
+
+			else if (players[i].Pos->Type == 2)
+			{
+				printf("[City] ");
+			}
+			if (j == Size-1)
+			{
+				printf("\n");
+			}
+		}
+	}
+
+}
+
+
+//Function to randomly assign a location to each player
+void fillPlayers(int Size)
+{
+	int i;
+
+	for (i = 0; i < Num_Players; i++)
+	{
+		players[i].Pos = &Board[rand() % Size][rand() % Size];
+	}
+
+	for (i = 0; i < Num_Players; i++)
+	{
+		printf("%s is in position [%d, %d]\n", players[i].Name, players[i].Pos->row , players[i].Pos->column);
+	}
+}

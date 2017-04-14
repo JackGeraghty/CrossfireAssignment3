@@ -1,4 +1,4 @@
-//Crossfire Assignment 3 External Functions C file
+//Crossfire Assignment 3 Functions used when creating the players and assigning them their attributes
 
 #include <stdio.h>
 #include <string.h>
@@ -11,13 +11,13 @@
 //Function to get a number from the user within a range and can deal with bad input
 void getNumInRange(int minNum, int maxNum)
 {
-	bool is_valid = false;
-	bool is_num = false;
+	srand(time(NULL));
+	bool is_valid = false;	//Used to ensure good input from player
+	bool is_num = false;	//Bool used to ensure good input
 	char input[100];
 	int i;
 
-
-	//Getting Players
+	//Getting Number of Players
 	do
 	{
 		//Get Input
@@ -69,48 +69,50 @@ void getPlayerInfo()
 	char input[MAX_SIZE_INPUT];
 	bool is_valid;
 	bool is_num;
-	int minNum = 1;
-	int maxNum = 4;
+	int minNum = 1;	//Lowest Player Type
+	int maxNum = 4;	//Highest Player Type
 
-//Get Player Type///
+	//Get Player Type///
 	for (i = 0; i < Num_Players; i++)
 	{
-
+		//Do until input is valid
 		do
 		{
 			is_num = false;
 			is_valid = true;
+
+			//Get the user to input the player types for each player
 			printf("Enter the player type for Player %d:\n", i+1);
 			printf("1 - Elf\n2 - Human\n3 - Ogre\n4 - Wizard\n");
 			fgets(input, sizeof(input), stdin);
 
-				for (j = 0; i < strlen(input); j++)
+			for (j = 0; i < strlen(input); j++)
+			{
+				if (input[j] < 48 || input[j] > 57)
 				{
-					if (input[j] < 48 || input[j] > 57)
-					{
-						break;	//Bad input
-						is_valid = false;
-					}
-
+					break;	//Bad input
+					is_valid = false;
 				}
 
-				//Input is Good
-				if (is_valid == true)
-				{
+			}
 
-					if ((atoi(input) <= maxNum) && (atoi(input) >= minNum))
-					{
-						is_num = true;
-						players[i].Type = atoi(input)-1;
-					}
+			//Input is Good
+			if (is_valid == true)
+			{
+
+				if ((atoi(input) <= maxNum) && (atoi(input) >= minNum))
+				{
+					is_num = true;
+					players[i].Type = atoi(input)-1;	//Subtract 1 to match enum
 				}
+			}
 		} while (is_valid == false || is_num == false);
 
 	}
 
-char Types[][7] = {"Elf", "Human", "Ogre", "Wizard"};
+	char Types[][7] = {"Elf", "Human", "Ogre", "Wizard"};	//Used for printing
 
-//Get Player Name///
+	//Get Player Name///
 	for (i = 0; i < Num_Players; i++)
 	{
 		//Conditionals to print player type beside name
@@ -139,31 +141,29 @@ char Types[][7] = {"Elf", "Human", "Ogre", "Wizard"};
 			printf("Enter the name for Player %d(%s):\n", i+1, Types[3]);
 		}
 
+		//Get the user to input the player's name
 		fgets(input, MAX_NAME_LEN, stdin);
 
-		removeNewline();
+		removeNewline();	//Get rid of any newline characters left by fgets
 
-		strcpy(players[i].Name, input);
+		strcpy(players[i].Name, input);	//Put the name entered into the appropriate player
 
-		//printf("Player %d is called %s\n", i+1, players[i].Name);
 	}
 
 //Fill Player Attributes Randomly
 	for (i = 0; i < Num_Players; i++)
 	{
-		fillPlayerAttributes(i);
+		fillPlayerAttributes(i);	//Run the function to fill attributes
 	}
 
 	removeNewline();
-	//Test Purposes
-	//printPlayers();
+
+	printPlayers();	//Print the info about each player
 }
 
 //Function to randomly fill the attributes for each player depending on their player type
 void fillPlayerAttributes(int PlayerID)
 {
-	srand(time(NULL));
-
 	players[PlayerID].Health = 100; 	//Set each players health to 100
 
 	//Conditionals for each player type
@@ -173,7 +173,7 @@ void fillPlayerAttributes(int PlayerID)
 	{
 		players[PlayerID].Magic_Skills = rand() % (80 + 1 - 50) + 50;
 		players[PlayerID].Strength = rand() % (50 + 1 - 1) + 50;
-		players[PlayerID].Dexterity = rand() % 101;
+		players[PlayerID].Dexterity = rand() % (100 + 1 - 1) + 1;
 		players[PlayerID].Smartness = rand() % (100 + 1 - 70) + 70;
 		players[PlayerID].Luck = rand() % (100 + 1 - 60) + 60;
 	}
@@ -181,11 +181,17 @@ void fillPlayerAttributes(int PlayerID)
 	//Human
 	else if (players[PlayerID].Type == 1)
 	{
-		players[PlayerID].Magic_Skills =  rand() % 101;
-		players[PlayerID].Strength = rand() % 101;
-		players[PlayerID].Dexterity = rand() % 101;
-		players[PlayerID].Smartness = rand() % 101;
-		players[PlayerID].Luck = rand() % 101;
+		//Do until the sum of the values is less than 300
+		do
+		{
+			players[PlayerID].Magic_Skills =  rand() % 101;
+			players[PlayerID].Strength = rand() % 101;
+			players[PlayerID].Dexterity = rand() % 101;
+			players[PlayerID].Smartness = rand() % 101;
+			players[PlayerID].Luck = rand() % 101;
+
+		} while ((players[PlayerID].Magic_Skills + players[PlayerID].Strength + players[PlayerID].Dexterity + players[PlayerID].Smartness + players[PlayerID].Luck) >= 300);
+
 	}
 
 	//Ogre
@@ -210,7 +216,7 @@ void fillPlayerAttributes(int PlayerID)
 
 	else
 	{
-		printf("Error\n");
+		printf("Error\n");	//print in case there is an error assigning values
 	}
 }
 
@@ -223,6 +229,7 @@ void printPlayers()
 		{
 			printf("||%s's Attributes||\n", players[i].Name);
 
+			//printf("ID : %d\n", players[i].ID);
 			printf("Health : %d\n", players[i].Health);
 			printf("Strength : %d\n", players[i].Strength);
 			printf("Dexterity : %d\n", players[i].Dexterity);

@@ -1,0 +1,1036 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+#include "CrossfireA3Head.h"
+
+//C file to manage each turn
+//Turn Function
+//Handles what each player does while the game is still going
+void Turn(int BoardSize)
+{
+	Remaining_Players = Num_Players;
+	int is_game_over = 0;
+	int player_choice;
+	int i;
+
+
+	//What does each player do?
+
+
+
+
+		for (i = 0; i < Remaining_Players; i++)
+		{
+			printf("\n//////////	 %s		//////////\n", players[i].Name);
+
+			printf("%s (Health: %d)\n", players[i].Name, players[i].Health);
+			printf("Position: (%d, %d)\n\n", players[i].Pos->row, players[i].Pos->column);
+
+			player_choice = getInput(i);
+
+			//Move
+			if (player_choice == 1 && Remaining_Players  >= 1)
+			{
+				printf("%s is in position [%d, %d] ", players[i].Name, players[i].Pos->row, players[i].Pos->column);
+				if (players[i].Pos->Type == 0)
+				{
+					printf("[Level Ground].\n");
+				}
+				else if (players[i].Pos->Type == 1)
+				{
+					printf("[Hill].\n");
+				}
+
+				else if (players[i].Pos->Type== 2)
+				{
+					printf("[City].\n");
+				}
+				Move(i, BoardSize);
+				printf("%s is now in position [%d, %d].\n", players[i].Name, players[i].Pos->row, players[i].Pos->column);
+				//printPlayers();
+
+				modValues(i);
+			}
+
+			//Attack
+			else if (player_choice == 2 && Remaining_Players  >= 1)
+			{
+				Attack(i);
+				is_game_over = checkGameState();
+				if (is_game_over == 1)
+				{
+					break;
+				}
+			}
+
+			//Quit
+			else if (player_choice == 3 )
+			{
+				removePlayer(&i);
+				players[i].has_quit = 1;
+				if (is_game_over == 1)
+				{
+					break;
+				}
+
+			}
+
+			printf("Remaining players = %d\n", Remaining_Players);
+
+			printf("\n///////////////////////////////////////////\n");
+		}
+}
+
+//Function to control the movement of each player
+void Move(int PlayerID, int BoardSize)
+{
+	bool is_valid = false;
+	char input[MAX_SIZE_INPUT];
+
+	//printf("Entered move function\n");
+
+	//Player is in one of the four corners
+	if (((players[PlayerID].Pos->row == 0) && (players[PlayerID].Pos->column == 0))
+			||((players[PlayerID].Pos->row == 0) && (players[PlayerID].Pos->column == BoardSize - 1))
+			||((players[PlayerID].Pos->row == BoardSize - 1) && (players[PlayerID].Pos->column == 0))
+			||((players[PlayerID].Pos->row == BoardSize - 1) && (players[PlayerID].Pos->column == BoardSize - 1)))
+	{
+		//Player is in top left
+		if ((players[PlayerID].Pos->row == 0) && (players[PlayerID].Pos->column == 0))
+		{
+			do
+			{
+				printf("%s is in the top left corner of the board. Should they move 'right' or 'down' ?\n", players[PlayerID].Name);
+				fgets(input, sizeof(input), stdin);
+
+				if (check_input(input, "right") == 0)
+				{
+					//Player wants to move right
+					is_valid = moveDir(PlayerID, 3);
+				}
+
+				else if (check_input(input, "down") == 0)
+				{
+					//Player wants to move down
+					is_valid = moveDir(PlayerID, 1);
+				}
+
+				else
+				{
+					printf("Please enter a valid input.\n");
+				}
+
+			} while (is_valid == false);
+
+		}
+
+		//Player is in the top right corner of the board
+		else if ((players[PlayerID].Pos->row == 0) && (players[PlayerID].Pos->column == BoardSize - 1))
+		{
+			do
+			{
+				printf("%s is in the top right corner of the board. Should they move 'left' or 'down' ?\n", players[PlayerID].Name);
+				fgets(input, sizeof(input), stdin);
+
+				if (check_input(input, "left") == 0)
+				{
+					//Move left
+					is_valid = moveDir(PlayerID, 4);
+				}
+
+				else if (check_input(input, "down") == 0)
+				{
+					//Move Down
+					is_valid = moveDir(PlayerID, 1);
+				}
+
+				else
+				{
+					printf("Please enter a valid input.\n");
+				}
+			} while (is_valid == false);
+		}
+
+		//Player is in bottom left corner
+		else if ((players[PlayerID].Pos->row == BoardSize - 1) && (players[PlayerID].Pos->column == 0))
+		{
+			do
+			{
+				printf("%s is in the bottom left corner. Should they move 'right' or 'up' ?\n", players[PlayerID].Name);
+				fgets(input, sizeof(input), stdin);
+
+				if (check_input(input, "right") == 0)
+				{
+					//Move Right
+					is_valid = moveDir(PlayerID, 3);
+				}
+
+				else if (check_input(input, "up") == 0)
+				{
+					//Move up
+					is_valid = moveDir(PlayerID, 2);
+				}
+
+				else
+				{
+					printf("Please enter a valid input.\n");
+				}
+			} while (is_valid == false);
+		}
+
+		//Player is in bottom right corner
+		else if ((players[PlayerID].Pos->row == BoardSize - 1) && (players[PlayerID].Pos->column == BoardSize - 1))
+		{
+			do
+			{
+				printf("%s is in the bottom right corner. Should they move 'left' or 'up' ?\n", players[PlayerID].Name);
+				fgets(input, sizeof(input), stdin);
+
+				if(check_input(input, "left") == 0)
+				{
+					//Move left
+					is_valid = moveDir(PlayerID, 4);
+				}
+
+				else if (check_input(input, "up") == 0)
+				{
+					//Move up
+					is_valid = moveDir(PlayerID, 2);
+				}
+				else
+				{
+					printf("Please enter a valid input.\n");
+				}
+			} while (is_valid == false);
+		}
+
+		////////
+	}
+
+	//Player is on the edges of the board but not the corners
+	else if (( (players[PlayerID].Pos->row == 0) && (players[PlayerID].Pos->column != 0 || players[PlayerID].Pos->column != BoardSize - 1) )
+			||( (players[PlayerID].Pos->row == BoardSize - 1) && (players[PlayerID].Pos->column != 0 || players[PlayerID].Pos->column != BoardSize - 1) )
+			||( (players[PlayerID].Pos->column == 0) && (players[PlayerID].Pos->row != 0 || players[PlayerID].Pos->row != BoardSize - 1) )
+			||( (players[PlayerID].Pos->column == BoardSize - 1) && (players[PlayerID].Pos->row != 0 || players[PlayerID].Pos->row != BoardSize - 1) )	)
+	{
+		//Player is in row one
+		if (( (players[PlayerID].Pos->row == 0) && (players[PlayerID].Pos->column != 0 || players[PlayerID].Pos->column != BoardSize - 1) ) )
+		{
+			do
+			{
+				printf("%s is in the top row but not in one of the corners. Should they move 'left' , 'right' or 'down' ?\n", players[PlayerID].Name);
+				fgets(input, sizeof(input), stdin);
+
+				if (check_input(input, "left") == 0)
+				{
+					//Move left
+					is_valid = moveDir(PlayerID, 4);
+				}
+
+				else if (check_input(input, "right") == 0)
+				{
+					//Move right
+					is_valid = moveDir(PlayerID, 3);
+				}
+
+				else if (check_input(input, "down") == 0)
+				{
+					//Move down
+					is_valid = moveDir(PlayerID, 1);
+				}
+
+				else
+				{
+					printf("Please enter a valid input.\n");
+				}
+
+			} while (is_valid == false);
+		}
+
+		//Player is in last row
+		else if (( (players[PlayerID].Pos->row == BoardSize - 1) && (players[PlayerID].Pos->column != 0 || players[PlayerID].Pos->column != BoardSize - 1) ))
+		{
+			do
+			{
+				printf("%s is in the bottom row but not in one of the corners. Should they move 'left', 'right' or 'up' ?\n",players[PlayerID].Name);
+				fgets(input, sizeof(input), stdin);
+
+				if (check_input(input, "left") == 0)
+				{
+					//Move left
+					is_valid = moveDir(PlayerID, 4);
+				}
+
+				else if (check_input(input, "right") == 0)
+				{
+					//Move right
+					is_valid = moveDir(PlayerID, 3);
+				}
+
+				else if (check_input(input, "up") == 0)
+				{
+					//Move up
+					is_valid = moveDir(PlayerID, 2);
+				}
+
+				else
+				{
+					printf("Please enter a valid input.\n");
+				}
+			} while (is_valid == false);
+		}
+
+		//Player is in left column
+		else if (( (players[PlayerID].Pos->column == 0) && (players[PlayerID].Pos->row != 0 || players[PlayerID].Pos->row != BoardSize - 1) ))
+		{
+			do
+			{
+				printf("%s is in the left most column but not in one of the corners. Should they move 'right', 'up' or 'down' ?\n", players[PlayerID].Name);
+				fgets(input, sizeof(input), stdin);
+
+				if (check_input(input, "right") == 0)
+				{
+					//Moving right
+					is_valid = moveDir(PlayerID, 3);
+				}
+
+				else if (check_input(input, "up") == 0)
+				{
+					//Moving up
+					is_valid = moveDir(PlayerID, 2);
+				}
+
+				else if (check_input(input, "down") == 0)
+				{
+					//Moving down
+					is_valid = moveDir(PlayerID, 1);
+				}
+
+				else
+				{
+					printf("Please enter a valid input.\n");
+				}
+			} while (is_valid == false);
+		}
+
+		//Player is in the right most column
+		else if(( (players[PlayerID].Pos->column == BoardSize - 1) && (players[PlayerID].Pos->row != 0 || players[PlayerID].Pos->row != BoardSize - 1) ))
+		{
+			do
+			{
+				printf("%s is in the right most column but not in one of the corners. Should they move 'left', 'up' or 'down' ?\n", players[PlayerID].Name);
+				fgets(input, sizeof(input), stdin);
+
+				if ((check_input(input, "left") == 0))
+				{
+					//Moving left
+					is_valid = moveDir(PlayerID, 4);
+
+				}
+
+				else if ((check_input(input, "up") == 0))
+				{
+					//Moving up
+					is_valid = moveDir(PlayerID, 2);
+				}
+
+				else if ((check_input(input, "down") == 0))
+				{
+					//Moving down
+					is_valid = moveDir(PlayerID, 1);
+				}
+
+				else
+				{
+					printf("Please enter a valid input.\n");
+				}
+
+			} while (is_valid == false);
+		}
+	}
+
+	//Player is in the middle area of the board
+	else if ((players[PlayerID].Pos->row != 0)
+			&& (players[PlayerID].Pos->row != BoardSize - 1)
+			&& (players[PlayerID].Pos->column != 0)
+			&& (players[PlayerID].Pos->column != 0))
+	{
+		do
+		{
+			printf("%s is in the middle section of the board. Should they move 'left', 'right', 'up' or 'down' ?\n", players[PlayerID].Name);
+			fgets(input, sizeof(input), stdin);
+
+			if ((check_input(input, "left") == 0))
+			{
+				//Moving left
+				is_valid = moveDir(PlayerID, 4);
+			}
+
+			else if ((check_input(input, "right") == 0))
+			{
+				//Moving right
+				is_valid = moveDir(PlayerID, 3);
+			}
+
+			else if ((check_input(input, "up") == 0))
+			{
+				//Moving up
+				is_valid = moveDir(PlayerID, 2);
+			}
+
+			else if ((check_input(input, "down") == 0))
+			{
+				//Moving down
+				is_valid = moveDir(PlayerID, 1);
+			}
+
+			else
+			{
+				printf("Please enter a valid input.\n");
+			}
+		} while (is_valid == false);
+	}
+
+	else
+	{
+		printf("Problem moving player.\n");
+	}
+}
+
+int moveDir(int PlayerID, int dir)
+{
+	//Down
+	if (dir == 1)
+	{
+		printf("%s is moving down.\n", players[PlayerID].Name);
+		players[PlayerID].Pos = Board[players[PlayerID].Pos->row][players[PlayerID].Pos->column].down;
+	}
+
+	//Up
+	else if (dir == 2)
+	{
+		printf("%s is moving up.\n", players[PlayerID].Name);
+		players[PlayerID].Pos = Board[players[PlayerID].Pos->row][players[PlayerID].Pos->column].up;
+	}
+
+	//Right
+	else if (dir == 3)
+	{
+		printf("%s is moving right.\n", players[PlayerID].Name);
+		players[PlayerID].Pos = Board[players[PlayerID].Pos->row][players[PlayerID].Pos->column].right;
+	}
+
+	//Left
+	else if (dir == 4)
+	{
+		printf("%s is moving left.\n", players[PlayerID].Name);
+		players[PlayerID].Pos = Board[players[PlayerID].Pos->row][players[PlayerID].Pos->column].left;
+	}
+
+	return 1;
+
+}
+//Function to control when a player wants to attack
+void Attack(int PlayerID)
+{
+
+	bool is_valid = false;
+	char input[20];
+
+	do
+	{
+		printf("Should %s perform a 'close' attack, a 'ranged' attack or a 'magic' attack ?\n", players[PlayerID].Name);
+		fgets(input, sizeof(input), stdin);
+
+		if (check_input(input, "close") == 0)
+		{
+			printf("Performing close range\n");
+			close_range(PlayerID);
+			is_valid = true;
+		}
+
+		else if (check_input(input, "ranged") == 0)
+		{
+			printf("Performing long range\n");
+			long_range(PlayerID);
+			is_valid = true;
+		}
+
+		else if (check_input(input, "magic") == 0)
+		{
+			if ((players[PlayerID].Smartness + players[PlayerID].Magic_Skills) > 150)
+			{
+				printf("Performing magic\n");
+				magic_attack(PlayerID);
+				is_valid = true;
+
+			}
+
+			else
+			{
+				printf("%s is not able to perform a magic attack.\n", players[PlayerID].Name);
+			}
+		}
+
+		else
+		{
+			printf("Please enter a valid input.\n");
+		}
+	} while (is_valid == false);
+}
+
+void close_range(int PlayerID)
+{
+	struct Slot *currSlot = players[PlayerID].Pos;
+	struct Slot *foundSlots = malloc(BOARD_SIZE * BOARD_SIZE * sizeof(struct Slot));
+	int *TargetIDs = malloc(Remaining_Players * sizeof(int));
+	bool explored[BOARD_SIZE][BOARD_SIZE];
+	int count = 0;
+	int Num_Targets = 0;
+	char input[20];
+	bool is_valid = false;
+	bool is_member = false;
+	int Player_To_Remove;
+
+
+	//Setup bool array
+	for (int i = 0; i < BOARD_SIZE; i++)
+	{
+		for (int j = 0; j < BOARD_SIZE; j++)
+		{
+			explored[i][j] = false;
+		}
+	}
+
+
+	if (currSlot != NULL)
+	{
+
+		findSlots(1, 0, currSlot, foundSlots, &count, explored);
+
+
+		//Check to see if there is someone in the same place
+		for (int i = 0; i < Remaining_Players; i++)
+		{
+			if (players[i].Pos == players[PlayerID].Pos && i != PlayerID)
+			{
+				TargetIDs[Num_Targets] = players[i].ID;
+				Num_Targets++;
+			}
+		}
+
+		//Check surrounding slots
+		for (int i = 0; i < Remaining_Players; i++)
+		{
+			for (int j = 0; j < count; j++)
+			{
+				if ((foundSlots[j].row == players[i].Pos->row) && (foundSlots[j].column == players[i].Pos->column) && (i != PlayerID))
+				{
+
+					TargetIDs[Num_Targets] = players[i].ID;
+					Num_Targets++;
+				}
+			}
+
+		}
+		printf("Number of Targets: %d\n", Num_Targets);
+		for (int i = 0; i < Num_Targets; i++)
+		{
+			printf("Name: %s, ID: %d\n", players[TargetIDs[i]].Name, TargetIDs[i]);
+		}
+
+		//Get which player to attack
+		if (Num_Targets >= 1)
+		{
+			do
+			{
+				printf("Select which player to attack(Enter their ID): \n");
+				fgets(input, sizeof(input), stdin);
+
+				for (int i = 0; i < strlen(input); i++)
+				{
+					if (input[i] < 48 || input[i] > 57)
+					{
+						break;
+					}
+				}
+
+				if (atoi(input) >=0 && atoi(input) <= 5 && atoi(input) != PlayerID)
+				{
+					//check to see if that number is an ID from TargetIDs
+					for (int i = 0; i < Num_Targets; i++)
+					{
+						if (atoi(input) == TargetIDs[i])
+						{
+							is_member = true;
+						}
+					}
+				}
+
+				else
+				{
+					printf("Not a valid target\n");
+				}
+
+				Player_To_Remove = atoi(input);
+				if (is_member == true)
+				{
+					printf("%s is attacking %s.\n", players[PlayerID].Name, players[atoi(input)].Name);
+					is_valid = true;
+					//Attack that player
+					if (players[atoi(input)].Strength > 70)
+					{
+
+						players[PlayerID].Health -= floor(0.3 * players[atoi(input)].Strength);
+						printf("%s received %.0lf points of damage from %s.\n", players[PlayerID].Name, floor(0.3 * players[atoi(input)].Strength), players[atoi(input)].Name);
+
+						if (players[PlayerID].Health < 0)
+						{
+							players[PlayerID].Health = 0;//Player is dead
+							printf("%s has lost all of their health.\n", players[PlayerID].Name);
+							removePlayer(&PlayerID);
+
+						}
+
+
+					}
+
+
+
+					else if (players[atoi(input)].Strength <= 70)
+					{
+						players[atoi(input)].Health -= ((0.5 * players[atoi(input)].Strength));
+						printf("%s received %.0lf points of damage from %s.\n", players[atoi(input)].Name, floor(0.5 * players[atoi(input)].Strength), players[PlayerID].Name);
+
+
+						if (players[atoi(input)].Health < 0)
+						{
+							players[atoi(input)].Health = 0;//Player is dead
+
+							printf("%s has lost all of their health.\n", players[atoi(input)].Name);
+							removePlayer(&Player_To_Remove);
+						}
+					}
+
+				}
+
+				if (Num_Targets == 0)
+				{
+					printf("No targets available. Try again next turn.\n");
+				}
+			}while (is_valid == false);
+		}
+
+	}
+
+}
+
+void long_range(int PlayerID)
+{
+	struct Slot *currSlot = players[PlayerID].Pos;
+	struct Slot *foundSlots = malloc(BOARD_SIZE * BOARD_SIZE * sizeof(struct Slot));
+	int *TargetIDs = malloc(Remaining_Players * sizeof(int));
+	bool explored[BOARD_SIZE][BOARD_SIZE];
+	int count = 0;
+	int Num_Targets = 0;
+	char input[20];
+	bool is_valid = false;
+	bool is_member = false;
+	int Player_To_Remove;
+
+
+	//Setup bool array
+	for (int i = 0; i < BOARD_SIZE; i++)
+	{
+		for (int j = 0; j < BOARD_SIZE; j++)
+		{
+			explored[i][j] = false;
+		}
+	}
+
+
+	if (currSlot != NULL)
+	{
+
+		findSlots(2, 0, currSlot, foundSlots, &count, explored);
+		findSlots(3, 0, currSlot, foundSlots, &count, explored);
+		findSlots(4, 0, currSlot, foundSlots, &count, explored);
+
+		//Check to see if there is someone in the same place
+		for (int i = 0; i < Remaining_Players; i++)
+		{
+			if (players[i].Pos == players[PlayerID].Pos && i != PlayerID)
+			{
+				TargetIDs[Num_Targets] = players[i].ID;
+				Num_Targets++;
+			}
+		}
+
+		//Check surrounding slots
+		for (int i = 0; i < Remaining_Players; i++)
+		{
+			for (int j = 0; j < count; j++)
+			{
+				if ((foundSlots[j].row == players[i].Pos->row) && (foundSlots[j].column == players[i].Pos->column) && (i != PlayerID))
+				{
+
+					TargetIDs[Num_Targets] = players[i].ID;
+					Num_Targets++;
+				}
+			}
+
+		}
+		printf("Number of Targets: %d\n", Num_Targets);
+		for (int i = 0; i < Num_Targets; i++)
+		{
+			printf("Name: %s, ID: %d\n", players[TargetIDs[i]].Name, TargetIDs[i]);
+		}
+
+		//Get which player to attack
+		if (Num_Targets >= 1)
+		{
+			do
+			{
+				printf("Select which player to attack(Enter their ID): \n");
+				fgets(input, sizeof(input), stdin);
+
+				for (int i = 0; i < strlen(input); i++)
+				{
+					if (input[i] < 48 || input[i] > 57)
+					{
+						break;
+					}
+				}
+
+				if (atoi(input) >=0 && atoi(input) <= 6 && atoi(input) != PlayerID)
+				{
+					//check to see if that number is an ID from TargetIDs
+					for (int i = 0; i < Num_Targets; i++)
+					{
+						if (atoi(input) == TargetIDs[i])
+						{
+							is_member = true;
+						}
+					}
+				}
+
+				Player_To_Remove = atoi(input);
+				if (is_member == true)
+				{
+					printf("%s is attacking %s.\n", players[PlayerID].Name, players[atoi(input)].Name);
+					is_valid = true;
+					//Attack that player
+					if (players[atoi(input)].Dexterity >= players[PlayerID].Dexterity)
+					{
+						printf("%s dodged the attacked!\n", players[atoi(input)].Name);
+					}
+
+
+
+					else if (players[atoi(input)].Dexterity < players[PlayerID].Dexterity)
+					{
+						players[atoi(input)].Health -= floor((0.3 * players[atoi(input)].Strength));
+						printf("%s received %.0lf points of damage from %s.\n", players[atoi(input)].Name, floor(0.3 * players[atoi(input)].Strength), players[PlayerID].Name);
+
+						if (players[atoi(input)].Health < 0)
+						{
+							players[atoi(input)].Health = 0;//Player is dead
+
+							printf("%s has lost all of their health.\n", players[atoi(input)].Name);
+							removePlayer(&Player_To_Remove);
+						}
+					}
+
+				}
+
+
+			}while (is_valid == false);
+		}
+
+	}
+}
+
+void magic_attack(int PlayerID)
+{
+	bool is_valid = false;
+	char input[20];
+	int i;
+	int Player_To_Remove;
+	do
+	{
+		for (int i = 0; i < Remaining_Players; i++)
+		{
+			if (i != PlayerID)
+			{
+				printf("Name: %s ID: %d\n", players[i].Name, players[i].ID);
+			}
+
+		}
+		printf("Select a player to attack(Enter their ID): \n");
+		fgets(input, sizeof(input), stdin);
+
+		for (i = 0; i < strlen(input); i++)
+		{
+			if (input[i] < 48 || input[i] > 57)
+			{
+				//break is used to escape the loop if any of the characters are not numbers
+				break;
+			}
+		}
+
+		if ((atoi(input) != players[PlayerID].ID) && (atoi(input) >= 0) && atoi(input) <= Remaining_Players)
+		{
+			Player_To_Remove = atoi(input);
+			players[atoi(input)].Health -= floor(((0.5 * players[PlayerID].Magic_Skills) + (0.2 * players[PlayerID].Smartness)));
+			printf("%s received %.0lf points of damage from %s.\n", players[atoi(input)].Name, floor(0.5 * players[PlayerID].Magic_Skills) + (0.2 * players[PlayerID].Smartness))), players[PlayerID].Name);
+
+			is_valid = true;
+			if (players[atoi(input)].Health <= 0)
+			{
+				players[atoi(input)].Health = 0;
+				printf("%s has lost all of their health.\n", players[atoi(input)].Name);
+				removePlayer(&Player_To_Remove);
+			}
+
+		}
+
+
+		if (is_valid == false)
+		{
+			printf("Please enter a valid ID.\n");
+		}
+	} while (is_valid == false);
+
+}
+
+void findSlots(int reqDist, int currDist, struct Slot * currSlot, struct Slot * foundSlots, int *count, bool explored[BOARD_SIZE][BOARD_SIZE])
+{
+	//The base case: the current slot is at the required distance from the starting slot
+	if (currDist == reqDist)
+	{
+		//the current slot was not explored
+		if ((explored[currSlot->row][currSlot->column] == false))
+		{
+			//The next available position (indicated by count) at foundSlots points to the current slot
+			*(foundSlots + *count) = *currSlot;
+			//the counter is incremented
+			(*count)++;
+			//the matrix of the explored slots set to true the element at the row and column of the current slot
+			explored[currSlot->row][currSlot->column] = true;
+		}
+	}
+	//The recursive call: the current slot is at a distance that is less than the required distance (more slots still have to be traversed)
+	else
+	{
+		//if the current slot has the up slot != NULL (i.e. the slot is not in the first row)
+		if (currSlot->up != NULL)
+		{
+			//the matrix of the explored slots set to true the element at the row and column of the current slot
+			explored[currSlot->row][currSlot->column] = true;
+			//invokes function find slots incrementing the current Distance (currDist) and setting the current slot to the up slot
+			findSlots(reqDist, currDist + 1, currSlot->up, foundSlots, count, explored);
+		}
+		//if the current slot has the right slot != NULL (i.e. the slot is not in the last column)
+		if (currSlot->right != NULL)
+		{
+			//the matrix of the explored slots set to true the element at the row and column of the current slot
+			explored[currSlot->row][currSlot->column] = true;
+			//invokes function find slots incrementing the current Distance (currDist) and setting the current slot to the right slot
+			findSlots(reqDist, currDist + 1, currSlot->right, foundSlots, count, explored);
+		}
+		//if the current slot has the down slot != NULL (i.e. the slot is not in the last row)
+		if (currSlot->down != NULL)
+		{
+			//the matrix of the explored slots set to true the element at the row and column of the current slot
+			explored[currSlot->row][currSlot->column] = true;
+			//invokes function find slots incrementing the current Distance (currDist) and setting the current slot to the down slot
+			findSlots(reqDist, currDist + 1, currSlot->down, foundSlots, count, explored);
+		}
+		//if the current slot has the left slot != NULL (i.e. the slot is not in the first column)
+		if (currSlot->left != NULL)
+		{
+			//the matrix of the explored slots set to true the element at the row and column of the current slot
+			explored[currSlot->row][currSlot->column] = true;
+			//invokes function find slots incrementing the current Distance (currDist) and setting the current slot to the left slot
+			findSlots(reqDist, currDist + 1, currSlot->left, foundSlots, count, explored);
+		}
+	}
+}
+
+//Function to check the input of the user to see what they want to do
+int check_input(char *StringIn, char *Command)
+{
+	int output;
+	int i;
+
+	//Get rid of any newline characters and replace them with NULL terminators
+	for (i = 0; i < strlen(StringIn); i++)
+	{
+		if (StringIn[i] == '\n')
+		{
+			StringIn[i] = '\0';
+		}
+	}
+	output = strcmp(strlwr(StringIn), Command);
+
+	return output;
+}
+
+//Function to get input  from the player to see what they want to do each turn
+int getInput(int PlayerID)
+{
+	bool is_valid;
+	char input[MAX_SIZE_INPUT];
+	int output;
+
+	do
+	{
+		is_valid = false;
+		printf("Would %s like to 'move', 'attack' or 'quit'?\n", players[PlayerID].Name);
+		fgets(input, sizeof(input), stdin);
+
+		//Player wants to move
+		if (check_input(input, "move") == 0)
+		{
+			//printf("%s is Going to Move\n", players[PlayerID].Name);
+			output = 1;
+			is_valid = true;
+			//printf("Returning 1\n");
+		}
+
+		else if (check_input(input, "attack") == 0)
+		{
+			printf("%s is Going to Attack\n", players[PlayerID].Name);
+			output = 2;
+			is_valid = true;
+		}
+
+		else if (check_input(input, "quit") == 0)
+		{
+			printf("%s is Quitting the Game :(\n", players[PlayerID].Name);
+			output = 3;
+			is_valid = true;
+		}
+
+		else
+		{
+			printf("Please Enter a Valid Input\n");
+		}
+	} while (is_valid == false);
+
+	return output;
+}
+
+//Function to remove a player from the game if they quit or lose all their health
+void removePlayer(int *PlayerID)
+{
+	int i;
+	struct Player deadPlayer[1];
+
+	deadPlayer[0] = players[*PlayerID];
+
+	for (i = *PlayerID + 1; i < Remaining_Players; i++)
+	{
+		players[i].ID -= 1;
+		players[i - 1] = players[i];
+
+	}
+	players[i] = deadPlayer[0];
+	*PlayerID -= 1;
+	Remaining_Players--;
+}
+
+void modValues(int PlayerID)
+{
+	//Assign the player the slot type of their current slot
+	players[PlayerID].Pos->Type = Board[players[PlayerID].Pos->row][players[PlayerID].Pos->column].Type;
+
+	//Modify their value based on that slot
+
+	//Hill
+	if (players[PlayerID].Pos->Type == 1)
+	{
+		if (players[PlayerID].Dexterity < 50 )
+		{
+			if (players[PlayerID].Dexterity > 10)
+			{
+				players[PlayerID].Strength -= 10;
+				printf("You're dexterity fails you on this hill.\nLose 10 Strength points(Strength %d)\n", players[PlayerID].Strength);
+			}
+
+			//Check to see if their strength falls below 0
+			else
+			{
+				players[PlayerID].Strength = 0;
+				printf("You're like Captain America before he got pumped full of drugs! (Strength 0)\n");
+			}
+		}
+
+		else if (players[PlayerID].Dexterity>= 60)
+		{
+			if (players[PlayerID].Strength < 90)
+			{
+				players[PlayerID].Strength += 10;
+				printf("You're dexterity gives you the upper hand on this hill.\nGain 10 Strength points!(Strength %d)\n", players[PlayerID].Strength);
+			}
+
+			else
+			{
+				players[PlayerID].Strength = 100;
+				printf("You're as strong as Strong! (Strength maxed)\n");
+			}
+		}
+	}
+
+	else if (players[PlayerID].Pos->Type== 2)
+	{
+		if (players[PlayerID].Smartness > 60)
+		{
+			if (players[PlayerID].Magic_Skills < 90)
+			{
+				players[PlayerID].Magic_Skills += 10;
+				printf("Your intelligence is of benefit to you here in the city.\nGain 10 Magic Skill points!(Magic Skills: %d)\n", players[PlayerID].Magic_Skills);
+
+			}
+
+			else
+			{
+				players[PlayerID].Magic_Skills = 100;
+				printf("You're like Gandalf, or Dumbledore! You can't be any more magical!! (Magic Skills maxed)\n");
+			}
+
+		}
+
+		else if (players[PlayerID].Smartness <= 50)
+		{
+			if (players[PlayerID].Smartness > 10)
+			{
+				players[PlayerID].Dexterity -= 10;
+				printf("You're intelligence fails you in the city and you find yourself lost\nLose 10 Dexterity points!(Dexterity %d)\n", players[PlayerID].Dexterity);
+			}
+
+			else
+			{
+				players[PlayerID].Dexterity = 0;
+				printf("Could your Dexterity BE any lower!? (Dexterity 0)\n");
+			}
+		}
+	}
+
+	//printf("Values Modified\n");
+}
+
+int checkGameState()
+{
+	int return_value = 0;
+	if (Remaining_Players == 1)
+	{
+		return_value = 1;
+	}
+
+	return return_value;
+}
